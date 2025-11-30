@@ -1,0 +1,35 @@
+{
+  "name": "fetch-files",
+  "version": "1.0.0",
+  "description": "Comprehensive Pet Health Management Platform",
+  "private": true,
+  "workspaces": [
+    "mobile",
+    "backend",
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install && cd mobile && npm install && cd ../backend && npm install",
+    "dev:backend": "cd backend && npm run dev",
+    "dev:mobile": "cd mobile && npm start",
+    "build:backend": "cd backend && npm run build",
+    "build:mobile": "cd mobile && npm run build",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "clean": "rm -rf node_modules mobile/node_modules backend/node_modules shared/node_modules"
+  },
+  "keywords": [
+    "pet-health",
+    "veterinary",
+    "medical-records",
+    "telemedicine",
+    "react-native",
+    "mobile-app"
+  ],
+  "author": "Fetch Files Team",
+  "license": "PROPRIETARY",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
